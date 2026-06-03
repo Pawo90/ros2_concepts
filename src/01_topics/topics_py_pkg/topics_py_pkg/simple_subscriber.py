@@ -54,12 +54,9 @@ class SimpleSubscriberNode(Node):
         Callback function executed whenever
         a new message is received.
         """
-        # Read received data from the message
-        received_data = msg.data
-
         # Print received value to ROS2 logs
         self.get_logger().info(
-            f"Received data: {received_data}"
+            f"Received data: {msg.data}"
         )
 
 
